@@ -7,17 +7,19 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Table(name="emailsend")
-@Data
+@Table(name = "emailsend")
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class EmailSend {
-@Id
-@GeneratedValue(strategy=GenerationType.IDENTITY)
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String username;
 	private String email;
@@ -25,5 +27,5 @@ public class EmailSend {
 	private String receipient;
 	private String subject;
 	private String body;
-	
+
 }
